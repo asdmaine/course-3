@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        #showcase {
+            min-height: 400px;
+            background: #e2e2e2;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #showcase h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        #showcase img {
+            border-radius: 50%;
+            margin-top: 20px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #333;
+        }
+
+        /* Projects Section */
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* (2pts) Responsive Design: Media Queries */
+        @media (max-width: 768px) {
+            #showcase h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Hi, I'm a Developer</h1>
+            <p>Welcome to my personal portfolio website.</p>
+            <img src="https://picsum.photos/150" alt="Profile picture of the developer">
+            <br>
+            <button id="greetBtn">Click to Say Hello!</button>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>I am passionate about building accessible and responsive websites using HTML, CSS, and JavaScript.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <div class="card">
+            <h2>My Projects</h2>
+            <img src="https://picsum.photos/300/150" alt="Screenshot of Project A showing a dashboard" style="width:100%; max-width:300px;">
+            <h3>Project A</h3>
+            <p>A web application built to manage library books.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center; padding: 20px;">Copyright &copy; 2025</p>
+    </footer>
+
+    <script>
+        // Select the button
+        const btn = document.getElementById('greetBtn');
+
+        // Add an event listener for a click event
+        btn.addEventListener('click', function() {
+            // Logic to change text content dynamically
+            const showcaseText = document.querySelector('#showcase p');
+            showcaseText.textContent = "Thanks for visiting my portfolio! Let's build something great.";
+            showcaseText.style.color = "green";
+            showcaseText.style.fontWeight = "bold";
+            
+            alert("Hello! Thanks for clicking.");
+        });
+    </script>
+</body>
+</html>
